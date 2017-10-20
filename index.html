@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reprogramafy</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="img/logo-branco.png" alt="logo reprogramafy">
+      </div>
+      <div>
+        <button id="BtnLogin" class="login">Faça seu login</button> <p>ou</p> 
+        <button id="BtnCadastro">Cadastre-se</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1>Sua música. Sua programação.</h1>
+    <h2>Qualquer semelhança com outras plataformas é mera coincidência.</h2>
+  </main>
+  <!-- LOGIN -->
+  <div id="lightboxLogin" class="lightbox">
+    <div id="modalLogin" class="modal">
+      <a href="" id="closeLogin"><img src="img/close.png" class="close" alt="Btn Fechar"></a>
+      <img src="img/logo-vertical.png" class="logo" alt="Logo Reprogramafy">
+      <form action="novidades.html">
+        <input type="email" required placeholder="Email" id="email" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+        <input type="password" required placeholder="Senha" id="password">
+        <input type="submit" value="Logar">
+      </form>
+    </div>
+  </div>
+  <!-- CADASTRO -->
+  <div id="lightboxCadastro" class="lightbox">
+    <div id="modalCadastro" class="modal">
+      <a href="" id="closeCadastro"><img src="img/close.png" class="close" alt="Btn Fechar"></a>
+      <img src="img/logo-vertical.png" class="logo" alt="Logo Reprogramafy">
+      <form action="novidades.html">
+        <input type="name" required placeholder="Nome" id="nomeCadastro">
+        <input type="email" required placeholder="Email" id="emailCadastro">
+        <input type="password" required placeholder="Senha" id="passwordCadastro">
+        <input type="submit" value="Cadastrar">
+      </form>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>
