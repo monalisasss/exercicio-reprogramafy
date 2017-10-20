@@ -1,10 +1,10 @@
-var BtnCadastro = document.getElementById("BtnCadastro");
+var btnCadastro = document.getElementById("btnCadastro");
 var modalCadastro = document.getElementById("modalCadastro");
 var lightboxCadastro = document.getElementById("lightboxCadastro");
-var close = document.getElementById("closeCadastro");
+var closeCadastro = document.getElementById("closeCadastro");
 // QUANDO FOR CLASSE: document.querySelector('.modalCadastro')
 
-BtnCadastro.onclick = function(){
+btnCadastro.onclick = function(){
     lightboxCadastro.classList.add("visible");
 }
 lightboxCadastro.onclick = function(e){
@@ -12,33 +12,26 @@ lightboxCadastro.onclick = function(e){
         lightboxCadastro.classList.remove("visible");
     }
 }
-close.onclick = function(){
+closeCadastro.onclick = function(){
     lightboxCadastro.classList.remove("visible");
 }
 
-// Seleciona o formulário
-var form = document.querySelector('form');
-// Quando for enviar mandar os dados
-form.onsubmit = function (e) {
-    // Seleciona os inputs
-    var email = document.querySelector('#emailCadastro');
-    var password = document.querySelector('#passwordCadastro');
+var formCadastro = lightboxCadastro.querySelector('form');
 
-    // Seleciona a modalCadastro
-    var modalCadastro = document.querySelector('#modalCadastro');
+formCadastro.onsubmit = function (e) {
+    
+    // e.preventDefault();
 
-    // Verifica se o email e senha são permitidos
-    if(email.value !== 'admin@admin.com' || password.value !== 'admin') {
-        // Adiciona classe de erro na modalCadastro pra mostrar um feedback
-        modalCadastro.classList.add('erro');
+    var emailCadastro = document.querySelector('#emailCadastro');
+    var passwordCadastro = document.querySelector('#passwordCadastro');
 
-        // Remove a classe com erro depois de fazer a animação
-        setTimeout(function() {
-            modalCadastro.classList.remove('erro');
-        }, 1000);
+    localStorage.email = emailCadastro.value;
+    localStorage.password = passwordCadastro.value;
+    console.log(localStorage.email, localStorage.password);
+    
+    //localStorage.email = "email@email.com";
+    //localStorage.setItem(email, "email@email.com");
 
-        // Não deixa o usuário enviar o formulário
-        return false;
-    }
-    localStorage.usuario = email.value;
+    // return false;
+
 }

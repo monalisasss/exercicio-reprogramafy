@@ -27,7 +27,7 @@ nav {
   box-shadow: 0px -1px 8px 0px #444;
 }
 
-nav > div > button {
+nav button {
   background-color: #fff;
   border: none;
   padding: 10px 20px;
@@ -48,8 +48,6 @@ nav > div > button:hover {
   background: #7f479a;
   color: #fff;
 }
-
-
 
 nav > div > p{
   display: inline;
@@ -97,7 +95,12 @@ main {
 
 .modal .logo {
   max-width: 220px;
-  padding: 10px 0 40px 0;
+  padding: 0;
+}
+
+.modal > h2{
+  color: #7e459a;
+  margin: 10px 0 30px 0;
 }
 
 .modal .close {

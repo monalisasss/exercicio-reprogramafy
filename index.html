@@ -14,8 +14,8 @@
         <img src="img/logo-branco.png" alt="logo reprogramafy">
       </div>
       <div>
-        <button id="BtnLogin" class="login">Faça seu login</button> <p>ou</p> 
-        <button id="BtnCadastro">Cadastre-se</button>
+        <button id="btnLogin" class="login">Faça seu login</button> <p>ou</p> 
+        <button id="btnCadastro">Cadastre-se</button>
       </div>
     </nav>
   </header>
@@ -27,10 +27,11 @@
   <div id="lightboxLogin" class="lightbox">
     <div id="modalLogin" class="modal">
       <a href="" id="closeLogin"><img src="img/close.png" class="close" alt="Btn Fechar"></a>
-      <img src="img/logo-vertical.png" class="logo" alt="Logo Reprogramafy">
+      <img src="img/logo-icone.png" class="logo" alt="Logo Reprogramafy">
+      <h2>Login</h2>
       <form action="novidades.html">
-        <input type="email" required placeholder="Email" id="email" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
-        <input type="password" required placeholder="Senha" id="password">
+        <input type="email" required placeholder="Email" id="emailLogin" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+        <input type="password" required placeholder="Senha" id="passwordLogin">
         <input type="submit" value="Logar">
       </form>
     </div>
@@ -39,16 +40,17 @@
   <div id="lightboxCadastro" class="lightbox">
     <div id="modalCadastro" class="modal">
       <a href="" id="closeCadastro"><img src="img/close.png" class="close" alt="Btn Fechar"></a>
-      <img src="img/logo-vertical.png" class="logo" alt="Logo Reprogramafy">
-      <form action="novidades.html">
-        <input type="name" required placeholder="Nome" id="nomeCadastro">
+      <img src="img/logo-icone.png" class="logo" alt="Logo Reprogramafy">
+      <h2>Cadastro</h2>
+      <form action="">
+        <!--<input type="name" required placeholder="Nome" id="nomeCadastro">-->
         <input type="email" required placeholder="Email" id="emailCadastro">
         <input type="password" required placeholder="Senha" id="passwordCadastro">
         <input type="submit" value="Cadastrar">
       </form>
     </div>
   </div>
-  <script src="js/script.js"></script>
+  <script src="js/login.js"></script>
   <script src="js/cadastro.js"></script>
 </body>
 </html>
